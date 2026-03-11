@@ -4,22 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SecureNote App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>SecureNote</h1>
-    
-    <div id="error-message" class="hidden"></div>
-    
-    <div id="loading" class="hidden">Loading...</div>
+    <div class="container">
+        <header>
+            <h1>🔒 SecureNote</h1>
+            <p>Your private space for important thoughts</p>
+        </header>
+        
+        <div id="error-message" class="hidden alert alert-danger"></div>
+        
+        <div id="loading" class="hidden">
+            <span class="spinner"></span> Loading your notes...
+        </div>
 
-    <form id="note-form">
-        <input type="text" id="title" placeholder="Note Title" required>
-        <textarea id="content" placeholder="Note Content" required></textarea>
-        <button type="submit">Add Note</button>
-    </form>
+        <form id="note-form" class="card">
+            <div class="input-group">
+                <input type="text" id="title" placeholder="Note Title" required>
+            </div>
+            <div class="input-group">
+                <textarea id="content" placeholder="Write your note here..." rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Add Note</button>
+        </form>
 
-    <ul id="note-list"></ul>
+        <ul id="note-list"></ul>
+    </div>
 
     <script src="script.js"></script>
 </body>
