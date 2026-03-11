@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api/notes';
+const API_URL = 'https://securenote-66010835.onrender.com/api/notes';
 
 const CLIENT_TOKEN = 'my-super-secret-key'; 
 
