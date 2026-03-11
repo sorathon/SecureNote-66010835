@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureNote App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>SecureNote</h1>
+    
+    <div id="error-message" class="hidden"></div>
+    
+    <div id="loading" class="hidden">Loading...</div>
+
+    <form id="note-form">
+        <input type="text" id="title" placeholder="Note Title" required>
+        <textarea id="content" placeholder="Note Content" required></textarea>
+        <button type="submit">Add Note</button>
+    </form>
+
+    <ul id="note-list"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
