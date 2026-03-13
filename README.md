@@ -37,7 +37,7 @@
 
 แอปพลิเคชันจดโน้ตแบบ Full-stack ที่แยกการทำงานระหว่างฝั่ง Client และ Server ชัดเจน พร้อมระบบ Authentication และการบันทึกข้อมูลแบบ 2 ชั้น (PocketHost API + Local JSON Backup)
 
----
+--
 
 ## 🌍 Live Demo (ทดลองใช้งานจริง)
 
@@ -55,7 +55,7 @@
 * [Git](https://git-scm.com/) (สำหรับ Clone โปรเจกต์)
 * **Code Editor** เช่น [VS Code](https://code.visualstudio.com/) (แนะนำให้ติดตั้ง Extension "Live Server" เพื่อความสะดวกในการรัน Frontend)
 
----
+--
 
 # 🚀 Installation & Setup (ขั้นตอนการติดตั้งและรันโปรเจกต์แบบ Local)
 
