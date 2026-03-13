@@ -46,7 +46,7 @@
 * **Frontend (UI หน้าเว็บ):** [SecureNote App](https://secure-note-66010835-81i40hsi7-sorthons-projects.vercel.app/)
 * **Backend (API Server):** [SecureNote API (Render)](https://securenote-66010835.onrender.com)
 
----
+--
 
 ## ⚙️ Prerequisites (สิ่งที่ต้องมีสำหรับการรัน Local)
 
