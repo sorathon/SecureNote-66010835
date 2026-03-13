@@ -31,3 +31,57 @@
 
 * **ทำไมต้องเก็บใน Backend `.env`:** เพราะฝั่ง Backend เป็นสภาพแวดล้อมที่ปลอดภัย (Secure Environment) ผู้ใช้งานทั่วไปไม่สามารถเข้ามาดูโค้ดหรือไฟล์ในเซิร์ฟเวอร์ได้ 
 * **หากนำไปไว้ใน Frontend จะเกิดอะไรขึ้น:** โค้ด Frontend ทั้งหมดจะต้องถูกดาวน์โหลดไปรันที่เครื่องของผู้ใช้ (Browser) หากเรา Hardcode ตัว `SECRET_TOKEN` ไว้ในฝั่ง Frontend ผู้ใช้ทุกคนจะสามารถเปิด Developer Tools (F12) หรือดู Page Source เพื่ออ่านค่า Token นั้นได้อย่างง่ายดาย ซึ่งจะนำไปสู่ความเสี่ยงที่ผู้ไม่หวังดีจะขโมย Token นั้นไปใช้ยิง API ของเราโดยตรง เพื่อลบหรือสร้างข้อมูลขยะได้
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# SecureNote Application 🔒
+
+A full-stack web application that allows authorized users to securely create, view, and delete text notes. Built with Vanilla JavaScript, Node.js, Express, and PocketHost for data persistence.
+
+## Features
+- Client-Server Architecture
+- Dynamic DOM Manipulation (Vanilla JS)
+- RESTful API with Authorization via Secret Token
+- Persistent Storage using PocketHost API
+- Responsive Modern UI with Loading State
+
+## Prerequisites
+- [Node.js](https://nodejs.org/) installed on your machine.
+
+## Installation & Setup
+
+### 1. Clone the repository
+\`\`\`bash
+git clone <your-github-repo-url>
+cd secure-note-app
+\`\`\`
+
+### 2. Backend Setup
+Navigate to the backend directory and install dependencies:
+\`\`\`bash
+cd backend
+npm install
+\`\`\`
+
+Create a `.env` file in the `backend` folder and add the following variables:
+\`\`\`env
+PORT=3000
+SECRET_TOKEN=my-super-secret-key
+POCKETHOST_TOKEN=Bearer 20260301eink
+\`\`\`
+*(Note: Do not commit the `.env` file to version control)*
+
+Start the backend server:
+\`\`\`bash
+npm start
+# or use: node server.js
+\`\`\`
+The server should now be running on `http://localhost:3000`.
+
+### 3. Frontend Setup
+1. Open a new terminal.
+2. Navigate to the `frontend` folder.
+3. Simply open the `index.html` file in your preferred web browser. 
+   *(Alternatively, you can use an extension like VS Code Live Server to serve the files).*
+
+## Environment Separation
+Please refer to `REPORT.md` for a detailed explanation of the JS Engine vs. Runtime, DOM Manipulation, HTTP/HTTPS Request Cycles, and the security configuration using Environment Variables.
