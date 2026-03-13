@@ -35,53 +35,40 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 # SecureNote Application 🔒
 
-A full-stack web application that allows authorized users to securely create, view, and delete text notes. Built with Vanilla JavaScript, Node.js, Express, and PocketHost for data persistence.
+แอปพลิเคชันจดโน้ตแบบ Full-stack ที่แยกการทำงานระหว่างฝั่ง Client และ Server ชัดเจน พร้อมระบบ Authentication และการบันทึกข้อมูลแบบ 2 ชั้น (PocketHost API + Local JSON Backup)
 
-## Features
-- Client-Server Architecture
-- Dynamic DOM Manipulation (Vanilla JS)
-- RESTful API with Authorization via Secret Token
-- Persistent Storage using PocketHost API
-- Responsive Modern UI with Loading State
+---
 
-## Prerequisites
-- [Node.js](https://nodejs.org/) installed on your machine.
+## 🌍 Live Demo (ทดลองใช้งานจริง)
 
-## Installation & Setup
+โปรเจกต์นี้ได้รับการ Deploy ขึ้นบนระบบ Cloud เรียบร้อยแล้ว สามารถทดลองใช้งานได้ที่นี่:
 
-### 1. Clone the repository
-\`\`\`bash
-git clone <your-github-repo-url>
-cd secure-note-app
-\`\`\`
+* **Frontend (UI หน้าเว็บ):** [SecureNote App](https://secure-note-66010835-81i40hsi7-sorthons-projects.vercel.app/)
+* **Backend (API Server):** [SecureNote API (Render)](https://securenote-66010835.onrender.com)
 
-### 2. Backend Setup
-Navigate to the backend directory and install dependencies:
-\`\`\`bash
-cd backend
-npm install
-\`\`\`
+---
 
-Create a `.env` file in the `backend` folder and add the following variables:
-\`\`\`env
-PORT=3000
-SECRET_TOKEN=my-super-secret-key
-POCKETHOST_TOKEN=Bearer 20260301eink
-\`\`\`
-*(Note: Do not commit the `.env` file to version control)*
+## ⚙️ Prerequisites (สิ่งที่ต้องมีสำหรับการรัน Local)
 
-Start the backend server:
-\`\`\`bash
-npm start
-# or use: node server.js
-\`\`\`
-The server should now be running on `http://localhost:3000`.
+ก่อนเริ่มต้นรันโปรเจกต์ในเครื่องของคุณ กรุณาตรวจสอบให้แน่ใจว่าได้ติดตั้งเครื่องมือเหล่านี้แล้ว:
+* [Node.js](https://nodejs.org/) (จำเป็นต้องติดตั้งเพื่อรันเซิร์ฟเวอร์ Backend)
+* [Git](https://git-scm.com/) (สำหรับ Clone โปรเจกต์)
+* **Code Editor** เช่น [VS Code](https://code.visualstudio.com/) (แนะนำให้ติดตั้ง Extension "Live Server" เพื่อความสะดวกในการรัน Frontend)
 
-### 3. Frontend Setup
-1. Open a new terminal.
-2. Navigate to the `frontend` folder.
-3. Simply open the `index.html` file in your preferred web browser. 
-   *(Alternatively, you can use an extension like VS Code Live Server to serve the files).*
+---
 
-## Environment Separation
-Please refer to `REPORT.md` for a detailed explanation of the JS Engine vs. Runtime, DOM Manipulation, HTTP/HTTPS Request Cycles, and the security configuration using Environment Variables.
+## 🚀 Installation & Setup (ขั้นตอนการติดตั้งและรันโปรเจกต์แบบ Local)
+
+หากต้องการทดสอบรันโปรเจกต์นี้ในเครื่องของคุณเอง ให้ทำตามขั้นตอนดังต่อไปนี้:
+
+### ขั้นตอนที่ 0: ดาวน์โหลดโปรเจกต์
+เปิด Terminal และรันคำสั่งเพื่อ Clone โปรเจกต์มาที่เครื่องของคุณ:
+```bash
+git clone <ใส่-URL-GitHub-ของคุณที่นี่>
+cd <ชื่อโฟลเดอร์โปรเจกต์ของคุณ>
+
+### ขั้นตอนที่ 1: ดาวน์โหลดโปรเจกต์
+เปิด Terminal และรันคำสั่งเพื่อ Clone โปรเจกต์มาที่เครื่องของคุณ:
+```bash
+git clone <ใส่-URL-GitHub-ของคุณที่นี่>
+cd <ชื่อโฟลเดอร์โปรเจกต์ของคุณ>
